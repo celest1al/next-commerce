@@ -1,0 +1,70 @@
+.brands_container {
+  flex: 0 1 auto;
+  height: 200px;
+  width: 100%;
+}
+
+.brands_content {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.brans_blur_effect_left::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 24%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(90deg, white 2.52%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.brands_blur_effect_right::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 24%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(270deg, white 2.52%, rgba(255, 255, 255, 0) 100%);
+  z-index: 2;
+}
+
+.brands_list {
+  position: absolute;
+  height: 100%;
+}
+
+.brands_row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 12px;
+  height: 100%;
+  gap: 12px;
+  transform: translate3d(0px, 0px, 0px);
+  animation: 40s linear 0s infinite normal none running move;
+  pointer-events: auto;
+  filter: drop-shadow(rgba(0, 0, 0, 0.1) 0px 4px 6px);
+}
+
+.brands_item {
+  transform: translate3d(0px, 0px, 0px);
+  height: 64px;
+  width: 124px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes move {
+  100% {
+    transform: translateX(-50%);
+  }
+}

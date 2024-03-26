@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
-
-const inter = Inter({ subsets: ["latin"] });
-
 import localFont from "next/font/local";
 
-export const helvetica = localFont({
+// const inter = Inter({ subsets: ["latin"] });
+
+const helvetica = localFont({
   src: [
     {
       path: "../../public/fonts/Helvetica-Regular.ttf",
